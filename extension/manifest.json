@@ -1,0 +1,78 @@
+{
+  "manifest_version": "0.2",
+  "name": "wangshi",
+  "display_name": "往事 Wangshi",
+  "version": "0.2.2",
+  "description": "Wangshi (往事) — your past ChatGPT chats, searchable from Claude. Local and private.",
+  "long_description": "往事把你的 ChatGPT 导出包导入到这台电脑上，让 Claude 能搜索和阅读你以前在 ChatGPT 里的全部对话。中文检索优先。全部在本地运行：不联网、不上传、不调用任何模型。\n\n用法：在 ChatGPT 里导出数据（文件留在\"下载\"文件夹就行），安装往事，然后在 Claude 里说\"帮我导入 ChatGPT 记录\"。\n\nWangshi imports your ChatGPT export locally so Claude can search and read your past ChatGPT conversations. Nothing leaves your computer.",
+  "icon": "icon.png",
+  "author": {
+    "name": "Neal"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neallili/wangshi"
+  },
+  "homepage": "https://github.com/neallili/wangshi",
+  "support": "https://github.com/neallili/wangshi/issues",
+  "license": "MIT",
+  "keywords": [
+    "chatgpt",
+    "history",
+    "search",
+    "chinese",
+    "local"
+  ],
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ],
+      "env": {
+        "WANGSHI_EXPORT_PATH": "${user_config.export_path}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "search",
+      "description": "按关键词搜索用户的 ChatGPT 对话，中文优先。"
+    },
+    {
+      "name": "list_conversations",
+      "description": "按时间（从新到旧）或标题浏览用户的 ChatGPT 对话列表。"
+    },
+    {
+      "name": "read_conversation",
+      "description": "读取一条 ChatGPT 对话的全文（当前分支），按页返回。"
+    },
+    {
+      "name": "status",
+      "description": "查看往事里已经导入了多少条 ChatGPT 对话、时间范围、上次导入时间，以及正在进行的导入进度。"
+    },
+    {
+      "name": "import",
+      "description": "导入或更新用户的 ChatGPT 记录。"
+    }
+  ],
+  "user_config": {
+    "export_path": {
+      "type": "directory",
+      "title": "ChatGPT 导出文件夹（可选）",
+      "description": "选择装着 ChatGPT 导出文件的文件夹（比如\"下载\"）。不填也可以，往事会自动在\"下载\"文件夹里找。",
+      "required": false
+    }
+  },
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32"
+    ],
+    "runtimes": {
+      "node": "^22.16.0 || >=24.0.0"
+    }
+  }
+}

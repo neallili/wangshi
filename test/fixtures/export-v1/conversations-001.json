@@ -1,0 +1,96 @@
+[
+  {
+    "title": "图片和文件",
+    "create_time": 1703000000,
+    "update_time": 1703000400,
+    "id": "d0000000-0000-4000-8000-000000000004",
+    "conversation_id": "d0000000-0000-4000-8000-000000000004",
+    "default_model_slug": "gpt-4o",
+    "current_node": "d-a3",
+    "mapping": {
+      "d-root": {"id": "d-root", "message": null, "parent": null, "children": ["d-u1"]},
+      "d-u1": {"id": "d-u1", "parent": "d-root", "children": ["d-a1"], "message": {
+        "id": "d-u1", "author": {"role": "user"}, "create_time": 1703000010,
+        "content": {"content_type": "multimodal_text", "parts": [
+          {"content_type": "image_asset_pointer", "asset_pointer": "file-service://file-IMG0001", "size_bytes": 2048, "width": 100, "height": 80},
+          "这张图里是什么？"]},
+        "recipient": "all",
+        "metadata": {"attachments": [{"id": "file-IMG0001", "name": "photo.png", "mime_type": "image/png", "size": 2048}]}}},
+      "d-a1": {"id": "d-a1", "parent": "d-u1", "children": ["d-u2"], "message": {
+        "id": "d-a1", "author": {"role": "assistant"}, "create_time": 1703000020,
+        "content": {"content_type": "text", "parts": ["这是一张猫的照片。"]}, "recipient": "all", "metadata": {"model_slug": "gpt-4o"}}},
+      "d-u2": {"id": "d-u2", "parent": "d-a1", "children": ["d-a2"], "message": {
+        "id": "d-u2", "author": {"role": "user"}, "create_time": 1703000100,
+        "content": {"content_type": "text", "parts": [""]}, "recipient": "all",
+        "metadata": {"attachments": [{"id": "file-CSV0001", "name": "data.csv", "mimeType": "text/csv", "size": 300}]}}},
+      "d-a2": {"id": "d-a2", "parent": "d-u2", "children": ["d-u3"], "message": {
+        "id": "d-a2", "author": {"role": "assistant"}, "create_time": 1703000110,
+        "content": {"content_type": "text", "parts": ["已读取 CSV，共 10 行。"]}, "recipient": "all", "metadata": {"model_slug": "gpt-4o"}}},
+      "d-u3": {"id": "d-u3", "parent": "d-a2", "children": ["d-a3"], "message": {
+        "id": "d-u3", "author": {"role": "user"}, "create_time": 1703000300,
+        "content": {"content_type": "text", "parts": ["请总结这个文件"]}, "recipient": "all",
+        "metadata": {"attachments": [{"id": "file-DOC0001", "name": "合同草稿.pdf", "mime_type": "application/pdf", "size": 50000}]}}},
+      "d-a3": {"id": "d-a3", "parent": "d-u3", "children": [], "message": {
+        "id": "d-a3", "author": {"role": "assistant"}, "create_time": 1703000400,
+        "content": {"content_type": "text", "parts": ["这份合同草稿主要约定了付款时间。"]}, "recipient": "all", "metadata": {"model_slug": "gpt-4o"}}}
+    }
+  },
+  {
+    "title": "",
+    "create_time": 1704000000,
+    "update_time": 1704000020,
+    "id": "e0000000-0000-4000-8000-000000000005",
+    "conversation_id": "e0000000-0000-4000-8000-000000000005",
+    "current_node": "e-a1",
+    "mapping": {
+      "e-root": {"id": "e-root", "message": null, "parent": null, "children": ["e-u1"]},
+      "e-u1": {"id": "e-u1", "parent": "e-root", "children": ["e-a1"], "message": {
+        "id": "e-u1", "author": {"role": "user"}, "create_time": 1704000010,
+        "content": {"content_type": "text", "parts": ["你好"]}, "recipient": "all", "metadata": {}}},
+      "e-a1": {"id": "e-a1", "parent": "e-u1", "children": [], "message": {
+        "id": "e-a1", "author": {"role": "assistant"}, "create_time": 1704000020,
+        "content": {"content_type": "text", "parts": ["你好！有什么可以帮你？"]}, "recipient": "all", "metadata": {"model_slug": "gpt-4o-mini"}}}
+    }
+  },
+  {
+    "title": null,
+    "create_time": 1705000000,
+    "update_time": 1705000120,
+    "id": "f0000000-0000-4000-8000-000000000006",
+    "conversation_id": "f0000000-0000-4000-8000-000000000006",
+    "gizmo_id": "g-p-fixture0001",
+    "gizmo_type": "snorlax",
+    "current_node": "f-does-not-exist",
+    "mapping": {
+      "f-root": {"id": "f-root", "message": null, "parent": null, "children": ["f-u1"]},
+      "f-u1": {"id": "f-u1", "parent": "f-root", "children": ["f-a1", "f-a1b"], "message": {
+        "id": "f-u1", "author": {"role": "user"}, "create_time": 1705000100,
+        "content": {"content_type": "text", "parts": ["项目里的问题：周报怎么写？"]}, "recipient": "all", "metadata": {}}},
+      "f-a1": {"id": "f-a1", "parent": "f-u1", "children": [], "message": {
+        "id": "f-a1", "author": {"role": "assistant"}, "create_time": 1705000110,
+        "content": {"content_type": "text", "parts": ["较早的回答。"]}, "recipient": "all", "metadata": {"model_slug": "gpt-4o"}}},
+      "f-a1b": {"id": "f-a1b", "parent": "f-u1", "children": [], "message": {
+        "id": "f-a1b", "author": {"role": "assistant"}, "create_time": 1705000120,
+        "content": {"content_type": "text", "parts": ["较新的回答：按完成、进行中、计划三段写。"]}, "recipient": "all", "metadata": {"model_slug": "gpt-4o"}}}
+    }
+  },
+  {
+    "title": "自定义 GPT 对话",
+    "create_time": 1706000000,
+    "update_time": 1706000020,
+    "id": "g0000000-0000-4000-8000-000000000007",
+    "gizmo_id": "g-FIXTURE01",
+    "gizmo_type": "gpt",
+    "current_node": "g-a1",
+    "mapping": {
+      "g-root": {"id": "g-root", "message": null, "parent": null, "children": ["g-u1"]},
+      "g-u1": {"id": "g-u1", "parent": "g-root", "children": ["g-a1"], "message": {
+        "id": "g-u1", "author": {"role": "user"}, "create_time": 1706000010,
+        "content": {"content_type": "text", "parts": ["帮我起个店名"]}, "recipient": "all", "metadata": {}}},
+      "g-a1": {"id": "g-a1", "parent": "g-u1", "children": [], "message": {
+        "id": "g-a1", "author": {"role": "assistant"}, "create_time": 1706000020,
+        "content": {"content_type": "text", "parts": ["叫「慢慢来」怎么样？"]}, "recipient": "all", "metadata": {"model_slug": "gpt-4o"}}}
+    }
+  },
+  {"title": "坏数据：没有 mapping", "create_time": 1707000000, "update_time": 1707000000, "id": "z0000000-0000-4000-8000-000000000099", "mapping": null}
+]

@@ -1,0 +1,11 @@
+{
+  "name": "wangshi",
+  "version": "0.2.2",
+  "private": true,
+  "description": "Wangshi (往事) — your past ChatGPT chats, searchable from Claude. Local and private.",
+  "license": "MIT",
+  "engines": {
+    "node": "^22.16.0 || >=24.0.0"
+  },
+  "dependencies": {}
+}

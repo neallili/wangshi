@@ -1,0 +1,25 @@
+*.mcpb
+.DS_Store
+node_modules/
+
+# secrets
+.env
+.env.*
+!.env.example
+
+# local databases (never commit imported data)
+*.db
+*.db-wal
+*.db-shm
+.wangshi/
+
+# benchmark / scratch output (synthetic exports can be hundreds of MB)
+bench-out/
+*.log
+
+# demo export built from synthetic fixtures (scripts/make-demo.js)
+dist/demo/
+
+# development notes and internal spec: kept on this machine, not in the public repo
+reports/
+docs/

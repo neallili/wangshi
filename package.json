@@ -1,0 +1,10 @@
+{
+  "name": "wangshi-dev",
+  "private": true,
+  "description": "Dev scripts for Wangshi (往事). The extension itself lives in extension/ and has no dependencies.",
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "pack": "npx --yes @anthropic-ai/mcpb@2.1.2 validate extension/manifest.json && npx --yes @anthropic-ai/mcpb@2.1.2 pack extension dist/wangshi-$(node -p \"require('./extension/package.json').version\").mcpb"
+  },
+  "license": "MIT"
+}

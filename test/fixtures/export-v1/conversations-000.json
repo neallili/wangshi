@@ -1,0 +1,99 @@
+[
+  {
+    "title": "温哥华买房讨论",
+    "create_time": 1700000000.5,
+    "update_time": 1700000300.25,
+    "id": "a0000000-0000-4000-8000-000000000001",
+    "conversation_id": "a0000000-0000-4000-8000-000000000001",
+    "default_model_slug": "gpt-4o",
+    "gizmo_id": null,
+    "current_node": "a-a2",
+    "mapping": {
+      "a-root": {"id": "a-root", "message": null, "parent": null, "children": ["a-sys"]},
+      "a-sys": {"id": "a-sys", "parent": "a-root", "children": ["a-u1"], "message": {
+        "id": "a-sys", "author": {"role": "system", "name": null}, "create_time": null,
+        "content": {"content_type": "text", "parts": [""]}, "recipient": "all",
+        "metadata": {"is_visually_hidden_from_conversation": true}}},
+      "a-u1": {"id": "a-u1", "parent": "a-sys", "children": ["a-a1"], "message": {
+        "id": "a-u1", "author": {"role": "user"}, "create_time": 1700000010,
+        "content": {"content_type": "text", "parts": ["我想在温哥华买房子，预算有限，应该怎么开始？"]},
+        "recipient": "all", "metadata": {}}},
+      "a-a1": {"id": "a-a1", "parent": "a-u1", "children": ["a-u2"], "message": {
+        "id": "a-a1", "author": {"role": "assistant"}, "create_time": 1700000020,
+        "content": {"content_type": "text", "parts": ["可以先从公寓看起，并提前了解首付和贷款预批。"]},
+        "recipient": "all", "metadata": {"model_slug": "gpt-4o"}}},
+      "a-u2": {"id": "a-u2", "parent": "a-a1", "children": ["a-a2"], "message": {
+        "id": "a-u2", "author": {"role": "user"}, "create_time": 1700000200,
+        "content": {"content_type": "text", "parts": ["那贷款预批大概要准备什么材料？"]},
+        "recipient": "all", "metadata": {}}},
+      "a-a2": {"id": "a-a2", "parent": "a-u2", "children": [], "message": {
+        "id": "a-a2", "author": {"role": "assistant"}, "create_time": 1700000300,
+        "content": {"content_type": "text", "parts": ["一般需要收入证明、银行流水和身份证件。"]},
+        "recipient": "all", "metadata": {"model_slug": "gpt-4o"}}}
+    }
+  },
+  {
+    "title": "学习编程语言",
+    "create_time": 1701000000,
+    "update_time": 1701000500,
+    "id": "b0000000-0000-4000-8000-000000000002",
+    "conversation_id": "b0000000-0000-4000-8000-000000000002",
+    "default_model_slug": "gpt-4",
+    "current_node": "b-a2r",
+    "mapping": {
+      "b-root": {"id": "b-root", "message": null, "parent": null, "children": ["b-u1", "b-u1e"]},
+      "b-u1": {"id": "b-u1", "parent": "b-root", "children": ["b-a1"], "message": {
+        "id": "b-u1", "author": {"role": "user"}, "create_time": 1701000010,
+        "content": {"content_type": "text", "parts": ["原始问题：怎么学习 Rust？"]}, "recipient": "all", "metadata": {}}},
+      "b-a1": {"id": "b-a1", "parent": "b-u1", "children": [], "message": {
+        "id": "b-a1", "author": {"role": "assistant"}, "create_time": 1701000020,
+        "content": {"content_type": "text", "parts": ["原始回答：先读官方教程。"]}, "recipient": "all", "metadata": {"model_slug": "gpt-4"}}},
+      "b-u1e": {"id": "b-u1e", "parent": "b-root", "children": ["b-a2", "b-a2r"], "message": {
+        "id": "b-u1e", "author": {"role": "user"}, "create_time": 1701000100,
+        "content": {"content_type": "text", "parts": ["修改后的问题：怎么学习 Go？"]}, "recipient": "all", "metadata": {}}},
+      "b-a2": {"id": "b-a2", "parent": "b-u1e", "children": [], "message": {
+        "id": "b-a2", "author": {"role": "assistant"}, "create_time": 1701000110,
+        "content": {"content_type": "text", "parts": ["第一次回答：从 Go Tour 开始。"]}, "recipient": "all", "metadata": {"model_slug": "gpt-4"}}},
+      "b-a2r": {"id": "b-a2r", "parent": "b-u1e", "children": [], "message": {
+        "id": "b-a2r", "author": {"role": "assistant"}, "create_time": 1701000500,
+        "content": {"content_type": "text", "parts": ["重新生成的回答：先写一个命令行小工具。"]}, "recipient": "all", "metadata": {"model_slug": "gpt-4"}}}
+    }
+  },
+  {
+    "title": "算一下 2 的 10 次方",
+    "create_time": 1702000000,
+    "update_time": 1702000100,
+    "id": "c0000000-0000-4000-8000-000000000003",
+    "conversation_id": "c0000000-0000-4000-8000-000000000003",
+    "default_model_slug": "gpt-4o",
+    "current_node": "c-a2",
+    "mapping": {
+      "c-root": {"id": "c-root", "message": null, "parent": null, "children": ["c-ctx"]},
+      "c-ctx": {"id": "c-ctx", "parent": "c-root", "children": ["c-u1"], "message": {
+        "id": "c-ctx", "author": {"role": "user"}, "create_time": null,
+        "content": {"content_type": "user_editable_context", "user_profile": "合成测试用的自定义说明", "user_instructions": "回答简短"},
+        "recipient": "all", "metadata": {"is_visually_hidden_from_conversation": true, "user_context_message_data": {}}}},
+      "c-u1": {"id": "c-u1", "parent": "c-ctx", "children": ["c-a1"], "message": {
+        "id": "c-u1", "author": {"role": "user"}, "create_time": 1702000010,
+        "content": {"content_type": "text", "parts": ["帮我算一下 2 的 10 次方"]}, "recipient": "all", "metadata": {}}},
+      "c-a1": {"id": "c-a1", "parent": "c-u1", "children": ["c-t1"], "message": {
+        "id": "c-a1", "author": {"role": "assistant"}, "create_time": 1702000020,
+        "content": {"content_type": "code", "language": "python", "text": "print(2 ** 10)"},
+        "recipient": "python", "metadata": {"model_slug": "gpt-4o"}}},
+      "c-t1": {"id": "c-t1", "parent": "c-a1", "children": ["c-th"], "message": {
+        "id": "c-t1", "author": {"role": "tool", "name": "python"}, "create_time": 1702000030,
+        "content": {"content_type": "execution_output", "text": "1024"}, "recipient": "all", "metadata": {}}},
+      "c-th": {"id": "c-th", "parent": "c-t1", "children": ["c-q"], "message": {
+        "id": "c-th", "author": {"role": "assistant"}, "create_time": 1702000040,
+        "content": {"content_type": "thoughts", "thoughts": [{"summary": "核对结果", "content": "1024 是正确的"}]},
+        "recipient": "all", "metadata": {"model_slug": "gpt-4o"}}},
+      "c-q": {"id": "c-q", "parent": "c-th", "children": ["c-a2"], "message": {
+        "id": "c-q", "author": {"role": "tool", "name": "web"}, "create_time": 1702000045,
+        "content": {"content_type": "tether_quote", "title": "合成网页", "text": "2 的 10 次方等于 1024"},
+        "recipient": "all", "metadata": {}}},
+      "c-a2": {"id": "c-a2", "parent": "c-q", "children": [], "message": {
+        "id": "c-a2", "author": {"role": "assistant"}, "create_time": 1702000050,
+        "content": {"content_type": "text", "parts": ["结果是 1024。"]}, "recipient": "all", "metadata": {"model_slug": "gpt-4o"}}}
+    }
+  }
+]
